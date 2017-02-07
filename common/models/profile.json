@@ -1,0 +1,30 @@
+{
+  "name": "Profile",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "FIRSTNAME": {
+      "type": "string",
+      "required": true
+    },
+    "LASTNAME": {
+      "type": "string",
+      "required": true
+    },
+    "EMAILID": {
+      "type": "string",
+      "required": true
+    },
+    "PASSWORD": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

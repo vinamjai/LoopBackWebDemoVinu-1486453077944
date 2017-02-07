@@ -3,32 +3,14 @@
     "name": "db",
     "connector": "memory"
   },
-  "geo": {
-    "name": "geo",
-    "connector": "rest",
-    "operations": [
-      {
-        "template": {
-          "method": "GET",
-          "url": "http://maps.googleapis.com/maps/api/geocode/{format=json}",
-          "headers": {
-            "accepts": "application/json",
-            "content-type": "application/json"
-          },
-          "query": {
-            "address": "{street},{city},{zipcode}",
-            "sensor": "{sensor=false}"
-          },
-          "responsePath": "$.results[0].geometry.location"
-        },
-        "functions": {
-          "geocode": [
-            "street",
-            "city",
-            "zipcode"
-          ]
-        }
-      }
-    ]
+  "dashdb": {
+    "host": "bluemix05.bluforcloud.com",
+    "port": 50000,
+    "database": "BLUDB",
+    "password": "7c13a925bc82",
+    "name": "dashdb",
+    "dsn": "DATABASE=BLUDB;HOSTNAME=bluemix05.bluforcloud.com;PORT=50000;PROTOCOL=TCPIP;UID=dash111462;PWD=7c13a925bc82;",
+    "user": "dash111462",
+    "connector": "dashdb"
   }
 }
